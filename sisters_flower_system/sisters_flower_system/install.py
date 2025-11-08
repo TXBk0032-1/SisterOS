@@ -15,17 +15,16 @@ Sisters Flower Sales System - Auto Install Script
 版本: 1.0
 """
 
-import sys
-import os
-import subprocess
-import platform
-import shutil
-import sqlite3
-import json
 import getpass
-import urllib.request
-from pathlib import Path
+import json
+import os
+import platform
+import sqlite3
+import subprocess
+import sys
 import time
+from pathlib import Path
+
 
 class AutoInstaller:
     """自动安装器类"""

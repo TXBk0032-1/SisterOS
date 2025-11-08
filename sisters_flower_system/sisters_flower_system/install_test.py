@@ -14,17 +14,16 @@ Sisters Flower Sales System - Installation Test Script
 版本: 1.0
 """
 
-import sys
-import os
+import argparse
+import importlib
 import json
 import sqlite3
+import sys
 import time
-import importlib
 import traceback
 from pathlib import Path
-from typing import Dict, List, Optional, Any
-import unittest
-import argparse
+from typing import Dict, Optional, Any
+
 
 class InstallationTester:
     """安装测试器"""

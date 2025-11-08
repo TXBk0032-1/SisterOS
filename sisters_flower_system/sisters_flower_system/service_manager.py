@@ -15,22 +15,21 @@ Sisters Flower Sales System - Service Management Tool
 版本: 1.0
 """
 
-import os
-import sys
-import time
+import argparse
 import json
-import sqlite3
-import threading
-import schedule
-import psutil
 import logging
+import os
+import shutil
+import subprocess
+import sys
+import threading
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Optional
-import subprocess
-import argparse
-import signal
-import shutil
+from typing import Dict
+
+import psutil
+
 
 class ServiceManager:
     """服务管理器类"""

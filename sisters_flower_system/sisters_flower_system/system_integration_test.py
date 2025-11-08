@@ -18,22 +18,17 @@ System Integration Test Suite for Sisters Flower System
 测试日期: 2025-11-08
 """
 
-import sys
-import os
-import unittest
-import time
-import threading
-import json
-import sqlite3
-import tempfile
-import shutil
-from datetime import datetime, date
-from unittest.mock import Mock, patch, MagicMock
-from pathlib import Path
-import traceback
 import gc
-import tkinter as tk
-from tkinter import ttk, messagebox
+import json
+import os
+import shutil
+import sqlite3
+import sys
+import tempfile
+import time
+import traceback
+from datetime import datetime, date
+from unittest.mock import Mock, patch
 
 # 尝试导入psutil，如果失败则使用替代方案
 try:

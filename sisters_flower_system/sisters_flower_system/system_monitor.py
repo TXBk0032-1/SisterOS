@@ -17,29 +17,24 @@ Sisters Flower Sales System - System Monitor and Maintenance Tool
 版本: 1.0
 """
 
-import os
-import sys
-import json
-import sqlite3
-import time
-import threading
-import psutil
-import logging
-import schedule
-import smtplib
-import email.mime.text
+import argparse
 import email.mime.multipart
+import email.mime.text
+import json
+import logging
+import os
+import re
+import shutil
+import smtplib
+import sqlite3
+import sys
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Tuple
-import argparse
-import subprocess
-import shutil
-import re
-from email.mime.base import MIMEBase
-from email import encoders
-import matplotlib.pyplot as plt
-import pandas as pd
+from typing import Dict, Any
+
+import psutil
+
 
 class SystemMonitor:
     """系统监控类"""

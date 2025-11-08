@@ -16,18 +16,16 @@ Sisters Flower Sales System - Unified Management Tool
 版本: 1.0
 """
 
-import os
-import sys
-import json
-import time
 import argparse
-import threading
-from pathlib import Path
-from typing import Dict, List, Optional, Any
+import json
 import subprocess
+import sys
+import threading
+import time
 import tkinter as tk
-from tkinter import ttk, messagebox, simpledialog
-import webbrowser
+from pathlib import Path
+from tkinter import ttk, messagebox
+from typing import Dict, Any
 
 # 添加当前目录到Python路径
 current_dir = Path(__file__).parent

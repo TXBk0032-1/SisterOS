@@ -23,7 +23,7 @@ performance_optimizer = None
 thread_pool = None
 cache_manager = None
 
-import cProfile
+rt cProfile
 import concurrent.futures
 import csv
 import functools
@@ -8919,23 +8919,5 @@ def run_performance_benchmark():
         ui_score = min(100, (test_results['ui']['operations_per_sec'] / 500) * 100)
         scores['ui'] = ui_score
         print(f"🖥️  UI性能: {ui_score:.1f}/100")
-    
-    # 总分
-    if scores:
-        total_score = sum(scores.values()) / len(scores)
-        print(f"\n🏆 系统性能总分: {total_score:.1f}/100")
-        
-        if total_score >= 90:
-            print("🌟 性能评级: 优秀")
-        elif total_score >= 80:
-            print("🎯 性能评级: 良好")
-        elif total_score >= 70:
-            print("📈 性能评级: 一般")
-        else:
-            print("⚠️ 性能评级: 需要优化")
-    
-    print("\n" + "="*50)
-    print("🎉 性能基准测试完成")
-    print("="*50)
     
     return test_results

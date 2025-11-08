@@ -2601,3 +2601,33 @@ AttributeError: 'LoginWindow' object has no attribute 'password_entry'. Did you 
 2025-11-09 00:30:29,973 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
 2025-11-09 00:30:29,973 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
 2025-11-09 00:30:29,973 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:29,975 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application interrupted by user
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
+2025-11-09 00:31:45,974 - root - INFO - [system] Application shutdown completed
