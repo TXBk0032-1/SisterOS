@@ -23,37 +23,31 @@ performance_optimizer = None
 thread_pool = None
 cache_manager = None
 
-import sys
-import os
-import tkinter as tk
-from tkinter import ttk, messagebox, filedialog, simpledialog
-import sqlite3
-from datetime import datetime, date, timedelta
-import json
+import cProfile
+import concurrent.futures
 import csv
+import functools
+import gc
+import hashlib
+import io
+import json
+import logging
+import os
+import pstats
+import queue
+import random
+import shutil
+import sqlite3
+import sys
 import threading
 import time
-import random
-import logging
-import traceback
-import warnings
-import functools
-from typing import Dict, List, Optional, Tuple, Callable, Any
-import subprocess
-import shutil
-import hashlib
-import queue
-import signal
+import tkinter as tk
 import weakref
+from datetime import datetime, date, timedelta
+from functools import lru_cache
 from pathlib import Path
-from contextlib import contextmanager
-import gc
-import concurrent.futures
-import asyncio
-from functools import lru_cache, wraps
-import cProfile
-import pstats
-import io
+from tkinter import ttk, messagebox, filedialog, simpledialog
+from typing import Dict, List, Optional
 
 # 全局变量初始化 - 在导入后立即定义以避免NameError
 performance_optimizer = None
@@ -62,7 +56,6 @@ cache_manager = None
 
 # 导入自定义配置模块
 from config.setting_manager import setting_manager
-from config.settings import AppConfig
 
 # 尝试导入现代化UI库
 try:
@@ -8056,10 +8049,7 @@ def apply_runtime_optimizations(db_path: str, startup_optimizations):
 def preload_core_modules():
     """预编译和预加载核心模块"""
     # 预编译常用的装饰器和工具函数
-    import functools
-    import operator
-    import collections
-    
+
     # 预编译常用lambda函数（避免运行时创建）
     _ = lambda x: x  # identity function
     _ = lambda x, y: x + y  # addition
