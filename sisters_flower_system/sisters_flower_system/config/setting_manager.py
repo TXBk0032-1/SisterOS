@@ -7,8 +7,7 @@
 import json
 import os
 import sys
-from typing import Dict, Any, Optional
-from pathlib import Path
+from typing import Dict, Any
 
 
 class SettingManager:

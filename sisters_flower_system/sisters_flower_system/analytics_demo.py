@@ -3,12 +3,13 @@
 数据分析图表模块演示脚本
 """
 
-import sys
 import os
+import sys
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from gui.analytics_charts_gui import create_analytics_demo, AnalyticsChartsGUI
-import tkinter as tk
+from gui.analytics_charts_gui import create_analytics_demo
+
 
 def main():
     """主演示函数"""

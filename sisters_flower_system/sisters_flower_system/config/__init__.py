@@ -3,6 +3,7 @@
 提供系统配置、主题、备份等配置的统一管理
 """
 
+from .setting_manager import setting_manager
 from .settings import (
     AppConfig,
     load_config,
@@ -12,13 +13,10 @@ from .settings import (
     THEME_CONFIG,
     DB_PATH
 )
-
 from .theme import (
     load_theme,
     save_theme
 )
-
-from .setting_manager import setting_manager
 
 __all__ = [
     'AppConfig',

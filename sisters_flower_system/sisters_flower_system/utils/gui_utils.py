@@ -5,8 +5,9 @@ GUI工具函数
 
 import tkinter as tk
 from tkinter import ttk, font
-from typing import Tuple, Any
-from PIL import Image, ImageTk
+from typing import Tuple
+
+from PIL import Image
 
 # 导入设置，处理相对导入问题
 try:

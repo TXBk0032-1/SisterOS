@@ -6,7 +6,8 @@
 import os
 import sys
 from pathlib import Path
-from typing import Union, Optional
+from typing import Union
+
 
 def get_resource_path(relative_path: str) -> str:
     """

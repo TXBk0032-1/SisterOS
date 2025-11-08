@@ -3,11 +3,10 @@
 统一的配置加载、保存和验证机制
 """
 
+import configparser
 import os
 import sys
-import configparser
 from typing import Dict, Any
-from pathlib import Path
 
 # 全局配置变量
 CONFIG = None

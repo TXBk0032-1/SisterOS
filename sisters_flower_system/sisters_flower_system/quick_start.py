@@ -14,16 +14,15 @@ Sisters Flower Sales System - Quick Start and System Check Tool
 版本: 1.0
 """
 
-import os
-import sys
-import json
-import time
-import subprocess
-import platform
-import importlib
-from pathlib import Path
-from typing import Dict, List, Optional, Any
 import argparse
+import importlib
+import platform
+import subprocess
+import sys
+import time
+from pathlib import Path
+from typing import Dict, List, Any
+
 
 class QuickStarter:
     """快速启动器"""

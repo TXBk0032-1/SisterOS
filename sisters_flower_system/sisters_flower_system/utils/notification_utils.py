@@ -4,9 +4,8 @@
 """
 
 import sys
-import tkinter as tk
-from typing import Optional
 import time
+import tkinter as tk
 
 
 class WindowsNotification:

@@ -4,9 +4,9 @@
 """
 
 import os
-from typing import Tuple, Optional, Union
+from typing import Tuple, Optional
+
 from PIL import Image, ImageTk
-import tkinter as tk
 
 
 class AvatarCropper:

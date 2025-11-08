@@ -16,26 +16,22 @@ Sisters Flower Sales System - Backup and Recovery Tool
 版本: 1.0
 """
 
-import os
-import sys
-import json
-import sqlite3
-import shutil
-import zipfile
-import gzip
-import tarfile
+import argparse
 import hashlib
-import schedule
-import time
-import threading
+import json
 import logging
+import shutil
+import sqlite3
+import sys
+import tarfile
+import tempfile
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
-from typing import Dict, List, Optional, Any, Tuple
-import argparse
-import subprocess
-import tempfile
-import psutil
+from typing import Dict, List, Optional, Any
+
+import schedule
+
 
 class BackupManager:
     """备份管理器"""

@@ -3,9 +3,10 @@
 处理销售相关的所有业务逻辑
 """
 
-from typing import List, Optional, Dict, Any
 from datetime import datetime, date
-from ..database.repositories import SalesRepository, SaleItemRepository, MemberRepository
+from typing import List, Optional, Dict, Any
+
+from ..database.repositories import SalesRepository, SaleItemRepository
 from ..models import Sale, SaleItem
 from ..services.member_service import MemberService
 

@@ -4,9 +4,10 @@
 """
 
 import tkinter as tk
-from tkinter import ttk
 from abc import ABC, abstractmethod
-from typing import Any, Callable, Optional, Dict, List
+from tkinter import ttk
+from typing import Any, Callable, Dict, List
+
 try:
     from ..config.settings import SCALE_FACTOR
 except ImportError:

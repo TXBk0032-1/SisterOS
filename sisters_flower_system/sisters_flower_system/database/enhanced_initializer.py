@@ -4,10 +4,10 @@
 初始化数据库表结构并添加示例数据
 """
 
-import sqlite3
 import os
-from datetime import datetime, date, timedelta
 import random
+import sqlite3
+from datetime import datetime, date, timedelta
 
 
 class EnhancedDatabaseInitializer:

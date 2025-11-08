@@ -4,6 +4,7 @@
 """
 
 from typing import List, Optional, Dict, Any
+
 from ..database.repositories import InventoryRepository
 from ..models import Inventory, ModelConverter
 

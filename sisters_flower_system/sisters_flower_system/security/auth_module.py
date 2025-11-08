@@ -7,28 +7,22 @@
 版本: 1.0.0
 """
 
-import sqlite3
-import hashlib
-import secrets
-import time
-import logging
-import json
-import datetime
-import re
 import base64
+import datetime
+import hashlib
 import hmac
-import base64 as base32
-from typing import Dict, List, Optional, Tuple, Any, Union
-from dataclasses import dataclass, asdict
+import json
+import re
+import secrets
+import sqlite3
+from dataclasses import dataclass
 from enum import Enum
+from typing import Dict, List, Optional, Tuple, Any
+
 from cryptography.fernet import Fernet
+from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
-from cryptography.hazmat.primitives import serialization
-from cryptography.hazmat.backends import default_backend
-import os
-import uuid
 
 
 # ============= 异常类定义 =============
@@ -516,7 +510,6 @@ class MultiFactorAuth:
     
     def verify_token(self, secret: str, token: str) -> bool:
         """验证MFA令牌"""
-        import base64
         import time
         
         # 允许时间窗口误差

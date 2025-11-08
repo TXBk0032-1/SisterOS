@@ -11,13 +11,12 @@ from .gui_utils import (
     scale_image_to_fit,
     safe_open_image
 )
-
-from .system_utils import (
-    get_version_from_filename,
-    SingleInstance,
-    check_festival
+from .image_utils import (
+    AvatarCropper
 )
-
+from .notification_utils import (
+    WindowsNotification
+)
 from .path_utils import (
     get_resource_path,
     get_project_root,
@@ -25,13 +24,10 @@ from .path_utils import (
     ensure_directory,
     get_config_path
 )
-
-from .image_utils import (
-    AvatarCropper
-)
-
-from .notification_utils import (
-    WindowsNotification
+from .system_utils import (
+    get_version_from_filename,
+    SingleInstance,
+    check_festival
 )
 
 __all__ = [

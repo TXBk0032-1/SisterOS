@@ -7,6 +7,7 @@ import sqlite3
 import threading
 from contextlib import contextmanager
 from typing import Optional, Dict, Any, List
+
 from ..config.settings import DB_PATH
 
 

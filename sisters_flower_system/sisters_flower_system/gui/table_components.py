@@ -6,7 +6,8 @@
 import tkinter as tk
 from tkinter import ttk
 from typing import List, Dict, Any, Callable, Optional
-from .base_components import BaseTreeview, BaseFrame, BaseButton
+
+from .base_components import BaseFrame
 
 # 导入工具函数
 try:

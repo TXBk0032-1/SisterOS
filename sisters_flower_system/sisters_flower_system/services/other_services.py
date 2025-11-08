@@ -3,14 +3,15 @@
 包含NFC、节日计算、销售目标、数据推送、备份等功能
 """
 
-import os
-import json
 import base64
+import json
+import os
 import threading
 import time
 from datetime import datetime
-from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from typing import Optional, Dict, Any
+
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
 
 class NFCService:

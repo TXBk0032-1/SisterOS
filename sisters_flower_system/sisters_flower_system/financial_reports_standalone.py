@@ -3,13 +3,11 @@
 可以独立运行的财务报表系统
 """
 
-import tkinter as tk
-from tkinter import ttk, messagebox, filedialog
-from datetime import datetime, date
-import os
-import json
-from typing import List, Dict, Any, Optional
 import calendar
+import tkinter as tk
+from datetime import datetime, date
+from tkinter import ttk, messagebox
+from typing import List, Dict, Any
 
 # 尝试导入matplotlib，如果失败则禁用图表功能
 try:

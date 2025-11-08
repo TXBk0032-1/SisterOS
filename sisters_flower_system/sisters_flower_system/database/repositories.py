@@ -4,11 +4,11 @@
 """
 
 from typing import Optional, List, Dict, Any
+
 from .manager import db_manager
 from ..models import (
-    User, Member, Inventory, Sale, SaleItem, 
-    SalesGoal, MemoryReminder, PushStatus,
-    ModelConverter
+    User, Member, Inventory, Sale, SaleItem,
+    SalesGoal, MemoryReminder, ModelConverter
 )
 
 

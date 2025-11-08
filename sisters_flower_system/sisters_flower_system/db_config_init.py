@@ -15,19 +15,17 @@ Sisters Flower Sales System - Database and Config Initialization Tool
 版本: 1.0
 """
 
-import os
-import sys
-import json
-import sqlite3
+import argparse
 import hashlib
+import json
+import logging
 import shutil
-from datetime import datetime, timedelta
+import sqlite3
+import sys
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Any
-import logging
-import argparse
-import tempfile
-import subprocess
+
 
 class DatabaseInitializer:
     """数据库初始化器"""

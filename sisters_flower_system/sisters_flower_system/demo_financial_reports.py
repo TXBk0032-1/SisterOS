@@ -4,8 +4,8 @@
 展示财务报表系统的各项功能
 """
 
-import sys
 import os
+import sys
 import tkinter as tk
 from tkinter import ttk
 

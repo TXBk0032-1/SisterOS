@@ -4,19 +4,18 @@
 提供完整的用户管理功能，包括用户CRUD、权限管理、活动日志等
 """
 
-import tkinter as tk
-from tkinter import ttk, messagebox, simpledialog
-from datetime import datetime, timedelta
-from typing import List, Dict, Any, Optional
 import os
 import sys
+import tkinter as tk
+from datetime import datetime, timedelta
+from tkinter import ttk, messagebox
+from typing import List, Dict, Any
 
 # 添加项目根目录到路径
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from .base_components import BaseFrame, BaseButton, BaseEntry, BaseLabel, BaseTreeview, BaseDialog
+from .base_components import BaseFrame, BaseDialog
 from ..config.win11_theme import win11_theme
-from ..config.settings import SCALE_FACTOR
 
 
 class User:

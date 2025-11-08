@@ -3,20 +3,19 @@
 提供完整的数据分析和图表展示功能
 """
 
-import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
-from matplotlib.figure import Figure
-import pandas as pd
-import numpy as np
-from datetime import datetime, timedelta
-import json
 import os
-from typing import Dict, List, Optional, Any
 import threading
 import time
-from concurrent.futures import ThreadPoolExecutor
+import tkinter as tk
+from datetime import datetime, timedelta
+from tkinter import ttk, filedialog, messagebox
+from typing import Dict, Any
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.figure import Figure
 
 # 数据库和业务服务模块的占位符导入
 # 在实际使用时可以取消注释下面的导入

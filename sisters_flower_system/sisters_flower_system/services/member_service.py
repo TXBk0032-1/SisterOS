@@ -3,12 +3,13 @@
 处理会员相关的所有业务逻辑
 """
 
-from typing import List, Optional, Dict, Any
-from datetime import datetime, date
-from ..database.repositories import MemberRepository
-from ..models import Member, ModelConverter
-from ..config.settings import DB_PATH
 import sqlite3
+from datetime import datetime, date
+from typing import List, Optional, Dict, Any
+
+from ..config.settings import DB_PATH
+from ..database.repositories import MemberRepository
+from ..models import Member
 
 
 class MemberService:
