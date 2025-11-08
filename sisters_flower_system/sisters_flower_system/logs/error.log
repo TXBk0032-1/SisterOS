@@ -1,0 +1,90 @@
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'

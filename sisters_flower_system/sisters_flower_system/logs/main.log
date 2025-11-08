@@ -1,0 +1,171 @@
+2025-11-08 23:07:23,203 - PerformanceOptimizer - INFO - Performance optimization system initialized
+2025-11-08 23:07:23,203 - PerformanceOptimizer - INFO - Performance optimization system initialized
+2025-11-08 23:07:23,203 - PerformanceOptimizer - INFO - Performance optimization system initialized
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_date
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_date
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_date
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_date
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_date
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_date
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_member
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_member
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_member
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_member
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_member
+2025-11-08 23:07:23,214 - DatabaseManager - INFO - Created performance index: perf_sales_member
+2025-11-08 23:07:23,214 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:07:23,214 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:07:23,214 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:07:23,214 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:07:23,214 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:07:23,214 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:07:23,215 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:07:23,215 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:07:23,216 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:07:23,216 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:07:23,216 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:07:23,216 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:07:23,216 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:07:23,216 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:07:23,216 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:07:23,216 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:07:23,216 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:07:23,216 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:07:23,217 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:07:23,217 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:07:23,217 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:07:23,217 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:07:23,217 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:07:23,217 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:07:23,218 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_230723.db
+2025-11-08 23:07:23,218 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_230723.db
+2025-11-08 23:07:23,218 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_230723.db
+2025-11-08 23:07:23,218 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_230723.db
+2025-11-08 23:07:23,218 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_230723.db
+2025-11-08 23:07:23,218 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_230723.db
+2025-11-08 23:07:23,218 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,218 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,218 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,218 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,218 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,218 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,221 - root - ERROR - Error in main: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+Traceback (most recent call last):
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 7883, in main
+    performance_optimizer.optimize_startup()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 322, in optimize_startup
+    self._lazy_load_modules()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\test\p\sisters_flower_system\sisters_flower_system\enhanced_sales_system.py", line 342, in _lazy_load_modules
+    self._lazy_imports[module_name] = import_func
+    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-11-08T16:35:30.403431",
+  "database_performance": {
+    "insert_time": 0.02155280113220215,
+    "query_time": 0.8798270225524902,
+    "agg_time": 0.2707250118255615,
+    "update_time": 0.007832765579223633,
+    "transaction_time": 0.13599300384521484
+  },
+  "memory_performance": {
+    "baseline_memory": 31.18359375,
+    "peak_memory": 50.25,
+    "memory_increase": 19.06640625,
+    "cleanup_delta": 0.0
+  },
+  "import_performance": {
+    "import_times": [
+      0.12801361083984375,
+      0.030125141143798828,
+      0.02629852294921875,
+      0.02663111686706543,
+      0.02643442153930664
+    ],
+    "avg_import_time": 0.04750056266784668
+  },
+  "summary": {
+    "database_grade": "A",
+    "memory_grade": "A",
+    "import_grade": "A",
+    "overall_grade": "A"
+  }
+}

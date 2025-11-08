@@ -1,0 +1,16 @@
+系统日志记录：
+------------------------
+2025.11.08 01:02:55 ---- ➡️ 服务器启动失败: module 'test_server' has no attribute 'start_server'
+2025.11.08 01:03:12 ---- ➡️ Traceback (most recent call last):
+2025.11.08 01:03:12 ---- ➡️ File "C:\test\p\姐妹花销售系统 beta9.py", line 5087, in <module>
+    root.mainloop()
+    ~~~~~~~~~~~~~^^
+2025.11.08 01:03:12 ---- ➡️ File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 1599, in mainloop
+    self.tk.mainloop(n)
+    ~~~~~~~~~~~~~~~~^^^
+2025.11.08 01:03:12 ---- ➡️ File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.2544.0_x64__qbz5n2kfra8p0\Lib\tkinter\__init__.py", line 2069, in __call__
+    def __call__(self, *args):
+2025.11.08 01:03:12 ---- ➡️ KeyboardInterrupt
+2025.11.08 01:03:34 ---- ➡️ 服务器启动失败: module 'test_server' has no attribute 'start_server'
+2025.11.08 01:35:40 ---- ➡️ 自动备份成功: C:\test\p\backups\backup_20251108_013540.db
+2025.11.08 01:35:59 ---- ➡️ 服务器启动失败: module 'test_server' has no attribute 'start_server'

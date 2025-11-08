@@ -1,0 +1,49 @@
+# 姐妹花销售系统 - 依赖包列表
+# Sisters Flower Sales System Dependencies
+
+# 核心GUI框架
+ttkbootstrap>=1.10.1
+tkinterdnd2>=0.3.0
+
+# Windows 11 UI增强
+pywinstyles>=1.0.1
+win32mica>=1.0.6
+pillow>=10.0.0
+
+# 数据处理和分析
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+
+# 数据库相关
+sqlite3  # Python内置，无需安装
+
+# 网络和安全
+cryptography>=41.0.0
+hashlib-compat>=1.0.1
+bcrypt>=4.0.0
+
+# 工具类库
+requests>=2.31.0
+openpyxl>=3.1.0
+python-dateutil>=2.8.0
+pytz>=2023.3
+schedule>=1.2.0
+
+# 系统工具
+psutil>=5.9.0
+watchdog>=3.0.0
+colorama>=0.4.6
+
+# 可选依赖（用于特定功能）
+# pip install pyinstaller  # 用于打包为可执行文件
+# pip install cx_Freeze    # 替代打包工具
+# pip install auto-py-to-exe  # GUI打包工具
+
+# 开发依赖（可选）
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.5.0
