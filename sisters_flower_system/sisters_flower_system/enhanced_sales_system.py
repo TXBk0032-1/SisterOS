@@ -3173,21 +3173,27 @@ class DataAnalysisModule:
         
         # 使用UI优化器进行异步更新
         self.ui_optimizer.safe_update(update_trend)
-    
+
     def get_trend_data_from_db(self, time_range: str):
         """从数据库获取趋势数据"""
-        with performance_optimizer.measure_performance("get_trend_data"):
-            try:
+        try:
+            with performance_optimizer.measure_performance("get_trend_data"):
                 return self.db_query_manager.execute_batch_query([
-                    ("SELECT DATE(sale_date), SUM(total_amount) FROM sales WHERE sale_date >= ? GROUP BY DATE(sale_date) ORDER BY DATE(sale_date)", (self.get_date_range_start(time_range),))
+                    (
+                        "SELECT DATE(sale_date), SUM(total_amount) FROM sales WHERE sale_date >= ? GROUP BY DATE(sale_date) ORDER BY DATE(sale_date)",
+                        (self.get_date_range_start(time_range),))
                 ])[0] or []
-            except Exception as e:
-                return []
         except (NameError, AttributeError):
             # 性能优化器未初始化，直接执行查询
             return self.db_query_manager.execute_batch_query([
-                ("SELECT DATE(sale_date), SUM(total_amount) FROM sales WHERE sale_date >= ? GROUP BY DATE(sale_date) ORDER BY DATE(sale_date)", (self.get_date_range_start(time_range),))
+                (
+                    "SELECT DATE(sale_date), SUM(total_amount) FROM sales WHERE sale_date >= ? GROUP BY DATE(sale_date) ORDER BY DATE(sale_date)",
+                    (self.get_date_range_start(time_range),))
             ])[0] or []
+        except Exception as e:
+            # 其他异常处理
+            print(f"查询趋势数据时出错: {e}")
+            return []
     
     def get_date_range_start(self, time_range: str) -> str:
         """获取日期范围起始日期"""
@@ -3207,9 +3213,6 @@ class DataAnalysisModule:
         # 这里可以集成matplotlib或其他图表库
         # 目前使用占位符显示
         print(f"更新趋势图表，数据点: {len(trend_data)}")
-    
-    # 数据获取方法
-
 
 
 class GoalManagementModule:
@@ -8414,7 +8417,7 @@ def generate_performance_report():
             else:
                 # 获取系统指标
                 if hasattr(performance_optimizer, 'get_system_metrics'):
-                system_metrics = performance_optimizer.get_system_metrics()
+                    system_metrics = performance_optimizer.get_system_metrics()
                 if system_metrics:
                     print(f"  💻 CPU 使用率: {system_metrics['cpu']['usage_percent']:.1f}%")
                     print(f"  💾 内存使用: {system_metrics['memory']['usage_percent']:.1f}% ({system_metrics['memory']['available_mb']:.0f}MB 可用)")
