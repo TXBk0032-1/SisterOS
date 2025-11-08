@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca21dbb-ef12-48d5-9364-6f87d52554f0" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/p.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/姐妹花销售系统 beta9.py" afterDir="false" />
+    <list default="true" id="1ca21dbb-ef12-48d5-9364-6f87d52554f0" name="更改" comment="q">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/enhanced_sales_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/enhanced_sales_system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/business.log" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/business.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/main.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,21 +37,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.enhanced_sales_system.executor": "Run",
-    "Python.run_enhanced.executor": "Run",
-    "Python.姐妹花销售系统 beta9.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.enhanced_sales_system.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_enhanced.executor&quot;: &quot;Run&quot;,
+    &quot;Python.姐妹花销售系统 beta9.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -71,6 +67,19 @@
       <option name="presentableId" value="Default" />
       <updated>1761916488507</updated>
     </task>
+    <task id="LOCAL-00001" summary="q">
+      <option name="closed" value="true" />
+      <created>1762614597698</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762614597698</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="q" />
+    <option name="LAST_COMMIT_MESSAGE" value="q" />
   </component>
 </project>

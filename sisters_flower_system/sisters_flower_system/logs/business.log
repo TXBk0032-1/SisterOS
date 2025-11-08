@@ -169,3 +169,140 @@ AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
 2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
 2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
 2025-11-08 23:07:25,181 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:13:21,247 - PerformanceOptimizer - INFO - Performance optimization system initialized
+2025-11-08 23:13:21,247 - PerformanceOptimizer - INFO - Performance optimization system initialized
+2025-11-08 23:13:21,247 - PerformanceOptimizer - INFO - Performance optimization system initialized
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_category: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_products_barcode: no such table: main.products
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:13:21,250 - DatabaseManager - WARNING - Failed to create index perf_inventory_product: no such column: product_id
+2025-11-08 23:13:21,250 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,250 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,250 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,250 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,250 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,250 - DatabaseManager - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,251 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:13:21,251 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:13:21,251 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:13:21,251 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:13:21,251 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:13:21,251 - DatabaseManager - INFO - Batch processor started
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:13:21,251 - HealthChecker - INFO - Health monitoring started
+2025-11-08 23:13:21,254 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:13:21,254 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:13:21,254 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:13:21,254 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:13:21,254 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:13:21,254 - BackupManager - INFO - Auto backup enabled
+2025-11-08 23:13:21,255 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:13:21,255 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:13:21,255 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:13:21,255 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:13:21,255 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:13:21,255 - root - INFO - [system] Error handling system initialized
+2025-11-08 23:13:21,256 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,256 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,256 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,256 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,256 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,256 - PerformanceOptimizer - INFO - Database performance optimizations applied
+2025-11-08 23:13:21,257 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_231321.db
+2025-11-08 23:13:21,257 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_231321.db
+2025-11-08 23:13:21,257 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_231321.db
+2025-11-08 23:13:21,257 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_231321.db
+2025-11-08 23:13:21,257 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_231321.db
+2025-11-08 23:13:21,257 - BackupManager - INFO - Backup created: backups\auto_backup_20251108_231321.db
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Database warmup completed
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Database warmup completed
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Database warmup completed
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Background monitoring started
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Database warmup completed
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Background monitoring started
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Database warmup completed
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Background monitoring started
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Database warmup completed
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Background monitoring started
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Background monitoring started
+2025-11-08 23:13:21,257 - PerformanceOptimizer - INFO - Background monitoring started
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,364 - MemoryCache - INFO - Cleaned up 3 expired cache entries
+2025-11-08 23:18:21,364 - MemoryCache - INFO - Cleaned up 3 expired cache entries
+2025-11-08 23:18:21,364 - MemoryCache - INFO - Cleaned up 3 expired cache entries
+2025-11-08 23:18:21,364 - MemoryCache - INFO - Cleaned up 3 expired cache entries
+2025-11-08 23:18:21,364 - MemoryCache - INFO - Cleaned up 3 expired cache entries
+2025-11-08 23:18:21,364 - MemoryCache - INFO - Cleaned up 3 expired cache entries
+2025-11-08 23:18:21,364 - MemoryCache - INFO - Cleaned up 3 expired cache entries
+2025-11-08 23:18:28,399 - root - INFO - [system] Application interrupted by user
+2025-11-08 23:18:28,399 - root - INFO - [system] Application interrupted by user
+2025-11-08 23:18:28,399 - root - INFO - [system] Application interrupted by user
+2025-11-08 23:18:28,399 - root - INFO - [system] Application interrupted by user
+2025-11-08 23:18:28,399 - root - INFO - [system] Application interrupted by user
+2025-11-08 23:18:28,399 - root - INFO - [system] Application interrupted by user
+2025-11-08 23:18:28,399 - root - INFO - [system] Application interrupted by user
+2025-11-08 23:18:28,399 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:18:28,399 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:18:28,399 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:18:28,399 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:18:28,399 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:18:28,399 - root - INFO - [system] Application shutdown completed
+2025-11-08 23:18:28,399 - root - INFO - [system] Application shutdown completed

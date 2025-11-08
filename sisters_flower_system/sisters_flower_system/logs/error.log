@@ -88,3 +88,44 @@ AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
 2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
 2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
 2025-11-08 23:07:23,226 - ExceptionHandler - ERROR - [main] AttributeError: 'PerformanceOptimizer' object has no attribute '_lazy_imports'
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:13:21,251 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:14:21,255 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:15:21,257 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:16:21,258 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:17:21,259 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol
+2025-11-08 23:18:21,261 - DatabaseManager - ERROR - Database verification failed: 'generator' object does not support the context manager protocol

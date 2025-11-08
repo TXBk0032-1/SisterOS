@@ -201,7 +201,7 @@ class PerformanceOptimizer:
     def start_measurement(self, operation_name: str) -> dict:
         """开始性能测量"""
         start_time = time.perf_counter()
-        start_memory = getattr(self, '_get_memory_usage', lambda: 0)()
+        start_memory = self.get_memory_usage()
         
         return {
             'operation_name': operation_name,
@@ -341,8 +341,12 @@ class PerformanceOptimizer:
             try:
                 # 只有在真正需要时才加载模块
                 self._lazy_imports[module_name] = import_func
-            except ImportError:
-                self.logger.warning(f"Failed to setup lazy loading for {module_name}")
+            except Exception as e:
+                # 检查logger是否可用
+                if hasattr(self, 'logger'):
+                    self.logger.warning(f"Failed to setup lazy loading for {module_name}: {e}")
+                else:
+                    print(f"Warning: Failed to setup lazy loading for {module_name}: {e}")
     
     def _warmup_database(self):
         """预热数据库"""
@@ -7853,12 +7857,18 @@ def main():
     try:
         # 初始化全局性能优化对象
         global performance_optimizer, thread_pool, cache_manager
-        if not performance_optimizer:
-            performance_optimizer = PerformanceOptimizer()
-        if not thread_pool:
-            thread_pool = OptimizedThreadPool()
-        if not cache_manager:
-            cache_manager = MemoryCache()
+
+         # 先初始化变量
+        performance_optimizer = None
+        thread_pool = None
+        cache_manager = None
+
+        # 初始化性能优化器
+        performance_optimizer = PerformanceOptimizer()
+
+        thread_pool = OptimizedThreadPool()
+
+        cache_manager = MemoryCache()
         
         # 检查数据库路径
         if not os.path.exists(os.path.dirname(os.path.abspath(__file__))):
