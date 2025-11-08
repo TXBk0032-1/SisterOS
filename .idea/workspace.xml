@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ca21dbb-ef12-48d5-9364-6f87d52554f0" name="更改" comment="q">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/enhanced_sales_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/enhanced_sales_system.py" afterDir="false" />
+    <list default="true" id="1ca21dbb-ef12-48d5-9364-6f87d52554f0" name="更改" comment="2">
       <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/business.log" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/business.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/main.log" beforeDir="false" afterPath="$PROJECT_DIR$/sisters_flower_system/sisters_flower_system/logs/main.log" afterDir="false" />
@@ -75,11 +73,20 @@
       <option name="project" value="LOCAL" />
       <updated>1762614597698</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2">
+      <option name="closed" value="true" />
+      <created>1762616045565</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762616045565</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="q" />
-    <option name="LAST_COMMIT_MESSAGE" value="q" />
+    <MESSAGE value="2" />
+    <option name="LAST_COMMIT_MESSAGE" value="2" />
   </component>
 </project>
