@@ -23,7 +23,7 @@ performance_optimizer = None
 thread_pool = None
 cache_manager = None
 
-rt cProfile
+import cProfile
 import concurrent.futures
 import csv
 import functools
