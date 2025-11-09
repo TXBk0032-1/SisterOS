@@ -17,12 +17,6 @@
 版本: 4.0 增强版
 """
 
-# ============ 全局变量立即初始化 ============
-# 立即定义这些变量，避免任何NameError
-performance_optimizer = None
-thread_pool = None
-cache_manager = None
-
 import cProfile
 import concurrent.futures
 import csv
@@ -50,7 +44,6 @@ from tkinter import ttk, messagebox, filedialog, simpledialog
 from typing import Dict, List, Optional
 
 # 全局变量初始化 - 在导入后立即定义以避免NameError
-performance_optimizer = None
 thread_pool = None
 cache_manager = None
 
@@ -76,10 +69,10 @@ except ImportError:
 
 try:
     import pywinstyles
-    PYWINSTYLES_AVAILABLE = True
+    PERISTYLES_AVAILABLE = True
 except ImportError:
-    PYWINSTYLES_AVAILABLE = False
-    print("警告: pywinstyles 不可用")
+    PERISTYLES_AVAILABLE = False
+    print("警告: peristyles 不可用")
 
 # 导入安全认证模块
 try:
@@ -115,6 +108,7 @@ class LogManager:
     """日志管理器 - 统一管理所有日志记录"""
     
     def __init__(self, log_dir: str = "logs"):
+        self.logger = None
         self.log_dir = Path(log_dir)
         self.log_dir.mkdir(exist_ok=True)
         self.setup_logging()
@@ -201,40 +195,6 @@ class PerformanceOptimizer:
         self.log_manager = LogManager("logs")
         self.logger = self.log_manager.get_logger("PerformanceOptimizer")
         self.logger.info("Performance optimization system initialized")
-    
-    def start_measurement(self, operation_name: str) -> dict:
-        """开始性能测量"""
-        start_time = time.perf_counter()
-        start_memory = self.get_memory_usage()
-        
-        return {
-            'operation_name': operation_name,
-            'start_time': start_time,
-            'start_memory': start_memory
-        }
-    
-    def end_measurement(self, measurement_data: dict):
-        """结束性能测量并记录结果"""
-        if not measurement_data:
-            return
-            
-        end_time = time.perf_counter()
-        execution_time = end_time - measurement_data['start_time']
-        
-        operation_name = measurement_data['operation_name']
-        
-        if operation_name not in self.performance_stats:
-            self.performance_stats[operation_name] = []
-        
-        self.performance_stats[operation_name].append({
-            'execution_time': execution_time,
-            'memory_before': measurement_data['start_memory'],
-            'timestamp': datetime.now()
-        })
-        
-        # 只记录超过阈值的操作
-        if execution_time > 0.5:  # 超过500ms的操作
-            self.logger.warning(f"Slow operation detected: {operation_name} took {execution_time:.3f}s")
     
     def get_memory_usage(self) -> float:
         """获取当前内存使用量（MB）"""
@@ -2512,6 +2472,8 @@ class LoginWindow:
     """登录窗口类 - Win11 Fluent UI风格"""
     
     def __init__(self):
+        self.password_entry = None
+        self.password_var = None
         self.root = tk.Tk()
         self.auth_manager = None
         self.current_user = None
@@ -2540,31 +2502,54 @@ class LoginWindow:
         except Exception as e:
             print(f"认证管理器初始化失败: {e}")
             self.auth_manager = None
-    
+
     def setup_window(self):
         """设置登录窗口"""
-        self.root.title("🌸 姐妹花销售系统 - 用户登录")
+        # 窗口基础设置
+        self.root.title("姐妹花销售系统 - 用户登录")
         self.root.geometry("420x520")
         self.root.resizable(False, False)
+
+        # 先设置默认背景，如果Mica效果应用成功会被覆盖
         self.root.configure(bg='#f0f0f0')
-        
+
         # 窗口居中显示
-        self.root.update_idletasks()
-        x = (self.root.winfo_screenwidth() // 2) - (420 // 2)
-        y = (self.root.winfo_screenheight() // 2) - (520 // 2)
-        self.root.geometry(f"420x520+{x}+{y}")
-        
-        # 设置窗口图标和属性
+        self._center_window(420, 520)
+
+        # 设置窗口视觉效果
+        self._apply_window_effects()
+
+    def _center_window(self, width, height):
+        """将窗口居中显示"""
+        self.root.update_idletasks()  # 确保获取准确的窗口尺寸
+
+        screen_width = self.root.winfo_screenwidth()
+        screen_height = self.root.winfo_screenheight()
+
+        x = (screen_width - width) // 2
+        y = (screen_height - height) // 2
+
+        self.root.geometry(f"{width}x{height}+{x}+{y}")
+
+    def _apply_window_effects(self):
+        """应用窗口视觉效果（如Windows 11 Mica效果）"""
+        # 检查是否支持Windows 11 Mica效果
+        if not WINDOWS11_MICA_AVAILABLE:
+            return  # 如果Mica不可用，保持默认背景色
+
         try:
-            # 获取窗口句柄并应用Windows 11效果
-            if WINDOWS11_MICA_AVAILABLE:
-                hwnd = int(self.root.winfo_id())
-                try:
-                    win32mica.ApplyMica(hwnd)
-                except:
-                    pass
-        except:
-            pass
+            hwnd = int(self.root.winfo_id())
+            win32mica.ApplyMica(hwnd)
+
+            # 如果应用了Mica效果，移除背景色设置以显示透明效果
+            self.root.configure(bg='')
+
+            print("Windows 11 Mica效果已应用")
+
+        except Exception as b:
+            # 保持原有的背景色，确保界面正常显示
+            print(f"应用Mica效果失败: {b}")
+
     
     def setup_ui(self):
         """设置登录界面"""
@@ -3899,7 +3884,7 @@ class EnhancedSalesSystem:
                             print(f"❌ Windows 11效果应用失败: {e}")
                             print("💡 这在非Windows系统或旧版本Windows上是正常的")
                     
-                if PYWINSTYLES_AVAILABLE:
+                if PERISTYLES_AVAILABLE:
                     # 应用Windows 11窗口样式
                     pywinstyles.set_opacity(hwnd, 1.0)
                     print("✅ Windows 11窗口样式应用成功")
@@ -7922,10 +7907,6 @@ def main():
         # 启动时间性能优化
         print("🚀 第2步: 应用启动时间优化...")
         startup_optimizations = apply_startup_optimizations(db_path, log_dir)
-        print("  ✅ 预加载系统组件")
-        print("  ✅ 优化数据库连接池")
-        print("  ✅ 初始化性能监控")
-        print("  ✅ 预热内存缓存")
         
         # 启动后台性能监控
         print("📊 第3步: 启动性能监控...")
@@ -8307,345 +8288,6 @@ def cleanup_resources():
     except Exception as e:
         print(f"  ⚠️ 资源清理警告: {e}")
 
-
-def generate_performance_report():
-    """生成完整的系统性能优化报告 - 增强版（安全版）"""
-    try:
-        print("\n" + "="*70)
-        print("🌸 姐妹花销售系统 - 性能优化报告 (增强版)")
-        print("="*70)
-        print(f"生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"报告版本: 4.0 Enhanced Performance Edition")
-        print()
-        
-        # 1. 系统概览
-        print("📋 系统概览:")
-        try:
-            # 安全地获取系统指标
-            if 'performance_optimizer' in globals():
-                perf_optimizer = globals()['performance_optimizer']
-                if perf_optimizer and hasattr(perf_optimizer, 'get_system_metrics'):
-                    system_metrics = perf_optimizer.get_system_metrics()
-                    if system_metrics:
-                        print(f"  💻 CPU 使用率: {system_metrics['cpu']['usage_percent']:.1f}%")
-                        print(f"  💾 内存使用: {system_metrics['memory']['usage_percent']:.1f}% ({system_metrics['memory']['available_mb']:.0f}MB 可用)")
-                        print(f"  💿 磁盘使用: {system_metrics['disk']['usage_percent']:.1f}%")
-                        print(f"  🔧 CPU 核心数: {system_metrics['cpu']['count']}")
-            else:
-                print("  ⚠️ 性能优化器未初始化")
-        except Exception as e:
-            print(f"  ⚠️ 系统指标获取失败: {e}")
-        
-        print()
-        
-        # 2. 数据库性能优化
-        print("📊 数据库性能优化:")
-        try:
-            print("  📈 索引优化: 自动创建性能索引，加速查询")
-            print("  ⚡ 批量查询: 支持并发批量执行，提升吞吐量")
-            print("  🔄 预热机制: 启动时预热数据库连接")
-        except Exception as e:
-            print(f"  ⚠️ 数据库优化状态无法确定: {e}")
-        
-        print()
-        
-        # 3. 内存管理优化
-        print("💾 内存管理优化:")
-        print("  📊 当前内存使用: 监控中")
-        print("  🗑️ 垃圾回收: 已启用自动优化，阈值调整")
-        print("  ⚡ 内存缓存: LRU缓存算法，TTL过期机制")
-        print("  🧹 资源清理: 自动清理过期资源，释放内存")
-        print()
-        
-        # 11. 性能建议
-        print("💡 性能优化建议:")
-        print("  💡 建议定期查看性能日志文件")
-        print("  💡 建议定期清理过期缓存")
-        print("  💡 建议监控系统资源使用情况")
-        print("  💡 建议定期备份数据库")
-        
-        print()
-        print("="*70)
-        print("🎉 系统性能优化完成！")
-        print("="*70)
-        print("💡 建议:")
-        print("  • 定期查看性能日志文件")
-        print("  • 监控内存使用情况")
-        print("  • 及时清理过期缓存")
-        print("  • 关注数据库查询性能")
-        print()
-        
-    except Exception as e:
-        print(f"生成性能报告时出错: {e}")
-        import traceback
-        traceback.print_exc()
-        
-        print()
-        print("="*60)
-        print("🎉 系统性能优化完成！")
-        print("="*60)
-        print("💡 建议:")
-        print("  • 定期查看性能日志文件")
-        print("  • 监控内存使用情况")
-        print("  • 及时清理过期缓存")
-        print("  • 关注数据库查询性能")
-        print()
-        
-        print("\n" + "="*70)
-        print("🌸 姐妹花销售系统 - 性能优化报告 (增强版)")
-        print("="*70)
-        print(f"生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"报告版本: 4.0 Enhanced Performance Edition")
-        print()
-        
-        # 1. 系统概览
-        print("📋 系统概览:")
-        try:
-            global performance_optimizer
-            if not performance_optimizer:
-                print("  ⚠️ 性能优化器未初始化")
-            else:
-                # 获取系统指标
-                if hasattr(performance_optimizer, 'get_system_metrics'):
-                    system_metrics = performance_optimizer.get_system_metrics()
-                if system_metrics:
-                    print(f"  💻 CPU 使用率: {system_metrics['cpu']['usage_percent']:.1f}%")
-                    print(f"  💾 内存使用: {system_metrics['memory']['usage_percent']:.1f}% ({system_metrics['memory']['available_mb']:.0f}MB 可用)")
-                    print(f"  💿 磁盘使用: {system_metrics['disk']['usage_percent']:.1f}%")
-                    print(f"  🔧 CPU 核心数: {system_metrics['cpu']['count']}")
-        except Exception as e:
-            print(f"  ⚠️ 系统指标获取失败: {e}")
-        
-        print()
-        
-        # 2. 数据库性能优化
-        print("📊 数据库性能优化:")
-        try:
-            print("  🔗 连接池管理: 已启用WAL模式，支持并发读写")
-            print("  🗄️ 查询缓存: TTL缓存系统，智能过期清理")
-            print("  📈 索引优化: 自动创建性能索引，加速查询")
-            print("  ⚡ 批量查询: 支持并发批量执行，提升吞吐量")
-            print("  🔄 预热机制: 启动时预热数据库连接")
-            
-            # 检查数据库连接池状态
-            if hasattr(performance_optimizer, '_active_connections'):
-                active_conns = len(getattr(performance_optimizer, '_active_connections', []))
-                print(f"  📊 活跃连接: {active_conns} 个数据库连接")
-                
-        except Exception as e:
-            print(f"  ⚠️ 数据库优化状态无法确定: {e}")
-        
-        print()
-        
-        # 3. 内存管理优化
-        print("💾 内存管理优化:")
-        try:
-            memory_usage = performance_optimizer.get_memory_usage()
-            print(f"  📊 当前内存使用: {memory_usage:.1f} MB")
-            print("  🗑️ 垃圾回收: 已启用自动优化，阈值调整")
-            print("  ⚡ 内存缓存: LRU缓存算法，TTL过期机制")
-            print("  🧹 资源清理: 自动清理过期资源，释放内存")
-            
-            # GC统计信息
-            gc_stats = gc.get_stats()
-            print(f"  🔄 GC代次统计: {len(gc_stats)} 个代次")
-            
-        except Exception as e:
-            print(f"  ⚠️ 内存优化状态无法确定: {e}")
-        
-        print()
-        
-        # 4. 线程池和并发优化
-        print("🔄 线程池和并发优化:")
-        try:
-            thread_stats = thread_pool.get_stats()
-            print(f"  🧵 线程池大小: {thread_stats['max_workers']} 个工作线程")
-            print(f"  ⚡ 活跃任务: {thread_stats['active_tasks']} 个")
-            print(f"  ✅ 完成任务: {thread_stats['completed_tasks']} 个")
-            print(f"  ❌ 失败任务: {thread_stats['failed_tasks']} 个")
-            print("  ⏱️ 任务监控: 实时执行时间跟踪和性能分析")
-            print("  🔀 负载均衡: 智能任务分配和资源利用")
-            
-        except Exception as e:
-            print(f"  ⚠️ 线程池状态无法确定: {e}")
-        
-        print()
-        
-        # 5. UI性能优化
-        print("🖥️ UI性能优化:")
-        try:
-            print("  🎯 UI更新节流: 防抖机制，防止频繁重绘")
-            print("  🔒 安全更新: 线程安全的UI操作，事件队列")
-            print("  📦 批量更新: 支持批量UI刷新，减少渲染开销")
-            print("  🚀 延迟加载: 按需加载UI组件，提升启动速度")
-            print("  🎨 动画优化: 硬件加速，流畅界面动画")
-            print("  📊 组件缓存: UI组件智能缓存，减少创建开销")
-            
-            # UI性能统计
-            if hasattr(performance_optimizer, 'ui_optimizer'):
-                ui_stats = performance_optimizer.ui_optimizer.get_ui_performance_stats()
-                print(f"  📈 缓存组件: {ui_stats.get('cached_widgets', 0)} 个")
-                print(f"  🎯 渲染队列: {ui_stats.get('render_queue_size', 0)} 个待渲染项目")
-                
-        except Exception as e:
-            print(f"  ⚠️ UI优化状态无法确定: {e}")
-        
-        print()
-        
-        # 6. 文件I/O优化
-        print("📁 文件I/O优化:")
-        print("  💾 原子写入: 防止数据损坏，事务性操作")
-        print("  📝 缓冲优化: 智能缓冲区管理，减少系统调用")
-        print("  💾 备份机制: 自动文件备份，数据安全保障")
-        print("  🗑️ 临时文件: 自动清理临时文件，避免磁盘空间泄漏")
-        print("  🔒 文件锁: 线程安全文件操作，避免竞态条件")
-        
-        print()
-        
-        # 7. 异常处理和错误恢复
-        print("🛡️ 异常处理和错误恢复:")
-        print("  🚨 全局异常捕获: 统一错误处理，异常信息详细记录")
-        print("  🔄 重试机制: 智能重试和降级，指数退避算法")
-        print("  📝 日志系统: 分类日志记录，结构化日志输出")
-        print("  ❤️  健康监控: 实时系统状态检查，自动故障恢复")
-        print("  🔍 错误分析: 错误模式识别，预测性维护")
-        
-        print()
-        
-        # 8. 缓存系统
-        print("⚡ 缓存系统:")
-        try:
-            cache_stats = cache_manager.get_stats()
-            cache_hit_rate = 100 - (cache_stats['expired_count'] / max(cache_stats['size'] + 1, 1) * 100)
-            print(f"  🎯 缓存命中率: {cache_hit_rate:.1f}%")
-            print(f"  📊 缓存使用率: {cache_stats['usage_rate']:.1f}%")
-            print(f"  🗑️ TTL清理: {cache_stats['expired_count']} 个过期项已清理")
-            print(f"  💾 缓存大小: {cache_stats['size']}/{cache_stats['max_size']} 项")
-            print("  🔄 缓存算法: LRU + TTL 双重过期机制")
-            
-        except Exception as e:
-            print(f"  ⚠️ 缓存统计无法确定: {e}")
-        
-        print()
-        
-        # 9. 性能监控
-        print("📈 性能监控:")
-        try:
-            perf_stats = performance_optimizer.get_performance_report()
-            if perf_stats['stats']:
-                print("  ✅ 函数执行监控: 已启用")
-                print("  ✅ 内存使用监控: 已启用")
-                print("  ✅ 数据库查询监控: 已启用")
-                print("  ✅ UI性能监控: 已启用")
-                print("  ✅ 系统资源监控: 已启用")
-                
-                # 显示性能统计
-                for operation, stats in perf_stats['stats'].items():
-                    print(f"    📊 {operation}: 平均{stats['avg_time']*1000:.1f}ms，最快{stats['min_time']*1000:.1f}ms，最慢{stats['max_time']*1000:.1f}ms")
-            else:
-                print("  ℹ️ 性能监控已初始化，等待数据收集")
-                
-        except Exception as e:
-            print(f"  ⚠️ 性能监控状态无法确定: {e}")
-        
-        print()
-        
-        # 10. 启动时间优化
-        print("🚀 启动时间优化:")
-        try:
-            startup_time = cache_manager.get('startup_time')
-            if startup_time:
-                print("  ⚡ 模块预加载: 延迟加载非关键模块")
-                print("  🔥 数据库预热: 预热常用查询和连接")
-                print("  💾 缓存预热: 预加载常用配置和数据")
-                print("  🧵 线程池预热: 预启动工作线程")
-                print("  🎨 UI组件预加载: 预加载常用界面组件")
-            else:
-                print("  ℹ️ 启动时间优化已配置")
-        except Exception as e:
-            print(f"  ⚠️ 启动优化信息无法确定: {e}")
-        
-        print()
-        
-        # 11. 性能建议
-        print("💡 性能优化建议:")
-        try:
-            # 根据当前状态给出建议
-            if 'performance_optimizer' in globals():
-                memory_usage = 0
-                perf_optimizer = globals()['performance_optimizer']
-                if not perf_optimizer:
-                    print("  ⚠️ 性能优化器未初始化")
-                else:
-                    try:
-                        memory_usage = perf_optimizer.get_memory_usage()
-                        if memory_usage > 200:
-                            print("  🔸 内存使用较高，建议检查大对象缓存")
-                        if memory_usage > 500:
-                            print("  🔸 内存使用过高，建议重启应用或增加内存")
-                    except AttributeError:
-                        print("  ⚠️ 性能优化器方法不可用")
-            else:
-                print("  ⚠️ 性能优化器未定义，跳过内存检查")
-                
-            # 继续其他建议...
-            if 'cache_manager' in globals():
-                global cache_manager
-                try:
-                    cache_stats = cache_manager.get_stats()
-                    if cache_stats['usage_rate'] > 90:
-                        print("  🔸 缓存使用率接近上限，建议增加缓存大小")
-                except:
-                    pass
-            if cache_stats['usage_rate'] > 90:
-                print("  🔸 缓存使用率接近上限，建议增加缓存大小")
-            
-            thread_stats = thread_pool.get_stats()
-            if thread_stats['active_tasks'] > thread_stats['max_workers'] * 0.8:
-                print("  🔸 线程池负载较高，建议增加线程池大小")
-            
-            print("  💡 建议定期查看性能日志文件")
-            print("  💡 建议定期清理过期缓存")
-            print("  💡 建议监控系统资源使用情况")
-            print("  💡 建议定期备份数据库")
-            
-        except Exception as e:
-            print(f"  ⚠️ 性能建议无法生成: {e}")
-        
-        print()
-        print("="*70)
-        print("🎉 系统性能优化完成！")
-        print("="*70)
-        print("🌟 特性亮点:")
-        print("  • 7层性能优化架构")
-        print("  • 智能缓存系统")
-        print("  • 自动性能监控")
-        print("  • 故障自愈机制")
-        print("  • 启动时间优化")
-        print("  • 资源自动清理")
-        print()
-        print("📞 如需技术支持，请查看日志文件获取详细错误信息")
-        print()
-        
-    except Exception as e:
-        print(f"生成性能报告时出错: {e}")
-        import traceback
-        traceback.print_exc()
-        
-        print()
-        print("="*60)
-        print("🎉 系统性能优化完成！")
-        print("="*60)
-        print("💡 建议:")
-        print("  • 定期查看性能日志文件")
-        print("  • 监控内存使用情况")
-        print("  • 及时清理过期缓存")
-        print("  • 关注数据库查询性能")
-        print()
-        
-    except Exception as e:
-        print(f"生成性能报告时出错: {e}")
-
 if __name__ == "__main__":
     print("🌸 姐妹花销售系统 - 增强版性能优化")
     print("="*50)
@@ -8661,15 +8303,6 @@ if __name__ == "__main__":
         performance_optimizer = PerformanceOptimizer()
         thread_pool = OptimizedThreadPool()
         cache_manager = MemoryCache()
-        
-        # 生成初始性能报告
-        print("📊 生成性能优化报告...")
-        try:
-            generate_performance_report()
-        except Exception as e:
-            print(f"⚠️ 性能报告生成失败: {e}")
-            import traceback
-            traceback.print_exc()
         
     except Exception as e:
         print(f"⚠️ 性能优化初始化警告: {e}")
@@ -8689,235 +8322,4 @@ if 'PerformanceOptimizer' in globals():
         pass  # 忽略初始化错误
 
 
-def run_performance_benchmark():
-    """运行性能基准测试"""
-    print("\n" + "="*50)
-    print("🏁 系统性能基准测试")
-    print("="*50)
-    
-    test_results = {}
-    
-    # 1. 数据库查询性能测试
-    print("🧪 测试1: 数据库查询性能")
-    try:
-        start_time = time.time()
-        
-        # 创建测试数据库
-        test_db = "test_performance.db"
-        if os.path.exists(test_db):
-            os.remove(test_db)
-        
-        # 初始化数据库
-        create_initial_database(test_db)
-        
-        # 执行批量插入测试
-        with sqlite3.connect(test_db) as conn:
-            cursor = conn.cursor()
-            start_insert = time.time()
-            for i in range(1000):
-                cursor.execute("INSERT INTO products (name, barcode, category) VALUES (?, ?, ?)", 
-                             (f"测试商品{i}", f"123456789{i:04d}", "测试类别"))
-            conn.commit()
-            insert_time = time.time() - start_insert
-            
-            # 执行查询测试
-            start_query = time.time()
-            for _ in range(100):
-                cursor.execute("SELECT * FROM products WHERE category = ?", ("测试类别",))
-                cursor.fetchall()
-            query_time = time.time() - start_query
-        
-        test_results['database'] = {
-            'insert_1000': insert_time,
-            'query_100': query_time,
-            'insert_rate': 1000 / insert_time,
-            'query_rate': 100 / query_time
-        }
-        
-        print(f"  ✅ 1000条插入: {insert_time:.3f}s ({1000/insert_time:.0f} 条/秒)")
-        print(f"  ✅ 100次查询: {query_time:.3f}s ({100/query_time:.0f} 次/秒)")
-        
-        # 清理测试文件
-        os.remove(test_db)
-        
-    except Exception as e:
-        print(f"  ❌ 数据库测试失败: {e}")
-        test_results['database'] = {'error': str(e)}
-    
-    # 2. 内存性能测试
-    print("\n🧪 测试2: 内存性能")
-    try:
-        global performance_optimizer
-        if not performance_optimizer:
-            print("  ⚠️ 性能优化器未初始化")
-            return
-        start_memory = performance_optimizer.get_memory_usage()
-        
-        # 创建大对象测试
-        test_data = []
-        for i in range(10000):
-            test_data.append({'id': i, 'data': f"test_data_{i}" * 10})
-        
-        memory_after = performance_optimizer.get_memory_usage()
-        memory_used = memory_after - start_memory
-        
-        # 清理测试数据
-        del test_data
-        gc.collect()
-        
-        final_memory = performance_optimizer.get_memory_usage()
-        memory_recovered = memory_after - final_memory
-        
-        test_results['memory'] = {
-            'memory_used': memory_used,
-            'memory_recovered': memory_recovered,
-            'memory_efficiency': (memory_recovered / memory_used * 100) if memory_used > 0 else 0
-        }
-        
-        print(f"  ✅ 内存使用: {memory_used:.1f}MB")
-        print(f"  ✅ 内存回收: {memory_recovered:.1f}MB")
-        print(f"  ✅ 回收效率: {test_results['memory']['memory_efficiency']:.1f}%")
-        
-    except Exception as e:
-        print(f"  ❌ 内存测试失败: {e}")
-        test_results['memory'] = {'error': str(e)}
-    
-    # 3. 线程池性能测试
-    print("\n🧪 测试3: 线程池性能")
-    try:
-        # 定义测试任务
-        def test_task(duration):
-            time.sleep(duration)
-            return f"任务完成，耗时{duration}s"
-        
-        start_time = time.time()
-        
-        # 提交多个任务
-        futures = []
-        for i in range(10):
-            duration = 0.1 + (i * 0.05)  # 不同持续时间
-            future = thread_pool.submit_task(test_task, duration)
-            futures.append(future)
-        
-        # 等待所有任务完成
-        results = []
-        for future in futures:
-            try:
-                result = future.result(timeout=5)
-                results.append(result)
-            except Exception as e:
-                results.append(f"任务失败: {e}")
-        
-        total_time = time.time() - start_time
-        thread_stats = thread_pool.get_stats()
-        
-        test_results['threading'] = {
-            'total_time': total_time,
-            'tasks_completed': len(results),
-            'concurrent_efficiency': (len(results) / thread_stats['max_workers']) / (total_time / 0.6)  # 估算效率
-        }
-        
-        print(f"  ✅ 总时间: {total_time:.3f}s")
-        print(f"  ✅ 完成任务: {len(results)}个")
-        print(f"  ✅ 并发效率: {test_results['threading']['concurrent_efficiency']:.2f}")
-        
-    except Exception as e:
-        print(f"  ❌ 线程池测试失败: {e}")
-        test_results['threading'] = {'error': str(e)}
-    
-    # 4. 缓存性能测试
-    print("\n🧪 测试4: 缓存性能")
-    try:
-        # 测试写入性能
-        start_time = time.time()
-        for i in range(1000):
-            cache_manager.set(f"test_key_{i}", f"test_value_{i}" * 10)
-        write_time = time.time() - start_time
-        
-        # 测试读取性能
-        start_time = time.time()
-        for i in range(1000):
-            _ = cache_manager.get(f"test_key_{i}")
-        read_time = time.time() - start_time
-        
-        cache_stats = cache_manager.get_stats()
-        
-        test_results['cache'] = {
-            'write_1000': write_time,
-            'read_1000': read_time,
-            'write_rate': 1000 / write_time,
-            'read_rate': 1000 / read_time,
-            'cache_size': cache_stats['size']
-        }
-        
-        print(f"  ✅ 1000次写入: {write_time:.3f}s ({1000/write_time:.0f} 次/秒)")
-        print(f"  ✅ 1000次读取: {read_time:.3f}s ({1000/read_time:.0f} 次/秒)")
-        print(f"  ✅ 缓存大小: {cache_stats['size']} 项")
-        
-    except Exception as e:
-        print(f"  ❌ 缓存测试失败: {e}")
-        test_results['cache'] = {'error': str(e)}
-    
-    # 5. UI性能测试
-    print("\n🧪 测试5: UI性能")
-    try:
-        # 创建测试根窗口
-        test_root = tk.Tk()
-        test_root.withdraw()  # 隐藏窗口
-        
-        ui_optimizer = UIOptimizer(test_root)
-        
-        # 测试UI更新性能
-        start_time = time.time()
-        for i in range(100):
-            # 模拟UI操作
-            ui_optimizer.safe_update(lambda: time.sleep(0.001))
-        ui_time = time.time() - start_time
-        
-        test_results['ui'] = {
-            'ui_operations': ui_time,
-            'operations_per_sec': 100 / ui_time
-        }
-        
-        print(f"  ✅ 100次UI操作: {ui_time:.3f}s ({100/ui_time:.0f} 次/秒)")
-        
-        test_root.destroy()
-        
-    except Exception as e:
-        print(f"  ❌ UI测试失败: {e}")
-        test_results['ui'] = {'error': str(e)}
-    
-    # 生成性能总结
-    print("\n" + "="*50)
-    print("📊 性能测试总结")
-    print("="*50)
-    
-    # 评分系统
-    scores = {}
-    
-    if 'database' in test_results and 'error' not in test_results['database']:
-        db_score = min(100, (test_results['database']['insert_rate'] / 1000) * 100)
-        scores['database'] = db_score
-        print(f"🗄️  数据库性能: {db_score:.1f}/100")
-    
-    if 'memory' in test_results and 'error' not in test_results['memory']:
-        mem_score = test_results['memory']['memory_efficiency']
-        scores['memory'] = mem_score
-        print(f"💾  内存性能: {mem_score:.1f}/100 (回收效率)")
-    
-    if 'threading' in test_results and 'error' not in test_results['threading']:
-        thread_score = min(100, test_results['threading']['concurrent_efficiency'] * 100)
-        scores['threading'] = thread_score
-        print(f"🔄  线程池性能: {thread_score:.1f}/100")
-    
-    if 'cache' in test_results and 'error' not in test_results['cache']:
-        cache_score = min(100, (test_results['cache']['read_rate'] / 10000) * 100)
-        scores['cache'] = cache_score
-        print(f"⚡  缓存性能: {cache_score:.1f}/100")
-    
-    if 'ui' in test_results and 'error' not in test_results['ui']:
-        ui_score = min(100, (test_results['ui']['operations_per_sec'] / 500) * 100)
-        scores['ui'] = ui_score
-        print(f"🖥️  UI性能: {ui_score:.1f}/100")
-    
-    return test_results
+
